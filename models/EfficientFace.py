@@ -1,6 +1,6 @@
 import torch
 import torch.nn as nn
-from models.Modulator import Modulator
+from models.modulator import Modulator
 
 
 def conv3x3(in_planes, out_planes, stride=1, groups=1, dilation=1):

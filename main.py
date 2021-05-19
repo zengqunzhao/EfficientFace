@@ -16,7 +16,6 @@ import numpy as np
 import datetime
 from models import resnet
 from models import EfficientFace
-from collections import OrderedDict
 
 now = datetime.datetime.now()
 time_str = now.strftime("[%m-%d]-[%H-%M]-")
@@ -48,21 +47,15 @@ def main():
     print('Training time: ' + now.strftime("%m-%d %H:%M"))
 
     # create model
-
-    # main network
+    ## EfficientFace
     model_cla = EfficientFace.efficient_face()
     model_cla.fc = nn.Linear(1024, 12666)
+    model_cla = torch.nn.DataParallel(model_cla).cuda()
     checkpoint = torch.load('./checkpoint/Pretrained_EfficientFace.tar')
     pre_trained_dict = checkpoint['state_dict']
-    new_pre_trained_dict = OrderedDict()
-    for k, v in pre_trained_dict.items():
-        name = k[7:]
-        new_pre_trained_dict[name] = v
-    model_cla.load_state_dict(new_pre_trained_dict)
-    model_cla.fc = nn.Linear(1024, 7)
-    model_cla = torch.nn.DataParallel(model_cla).cuda()
-
-    # obtain label distribution
+    model_cla.load_state_dict(pre_trained_dict)
+    model_cla.module.fc = nn.Linear(1024, 7).cuda()
+    ## LDG
     model_dis = resnet.resnet50()
     model_dis.fc = nn.Linear(2048, 7)
     model_dis = torch.nn.DataParallel(model_dis).cuda()
@@ -133,7 +126,7 @@ def main():
         start_time = time.time()
         current_learning_rate = adjust_learning_rate(optimizer, epoch, args)
         print('Current learning rate: ', current_learning_rate)
-        txt_name = './log/' + time_str + 'cnn_log.txt'
+        txt_name = './log/' + time_str + 'log.txt'
         with open(txt_name, 'a') as f:
             f.write('Current learning rate: ' + str(current_learning_rate) + '\n')
 
@@ -144,7 +137,7 @@ def main():
         val_acc, val_los = validate(val_loader, model_cla, criterion_val, args)
 
         recorder.update(epoch, train_los, train_acc, val_los, val_acc)
-        curve_name = time_str + 'cnn.png'
+        curve_name = time_str + 'log.png'
         recorder.plot_curve(os.path.join('./log/', curve_name))
 
         # remember best acc and save checkpoint
@@ -152,7 +145,7 @@ def main():
         best_acc = max(val_acc, best_acc)
 
         print('Current best accuracy: ', best_acc.item())
-        txt_name = './log/' + time_str + 'cnn_log.txt'
+        txt_name = './log/' + time_str + 'log.txt'
         with open(txt_name, 'a') as f:
             f.write('Current best accuracy: ' + str(best_acc.item()) + '\n')
 
@@ -160,7 +153,7 @@ def main():
         end_time = time.time()
         epoch_time = end_time - start_time
         print("An Epoch Time: ", epoch_time)
-        txt_name = './log/' + time_str + 'cnn_log.txt'
+        txt_name = './log/' + time_str + 'log.txt'
         with open(txt_name, 'a') as f:
             f.write(str(epoch_time) + '\n')
 
@@ -240,7 +233,7 @@ def validate(val_loader, model, criterion, args):
                 progress.display(i)
 
         print(' *** Accuracy {top1.avg:.3f}  *** '.format(top1=top1))
-        with open('./log/' + time_str + 'cnn_log.txt', 'a') as f:
+        with open('./log/' + time_str + 'log.txt', 'a') as f:
             f.write(' * Accuracy {top1.avg:.3f}'.format(top1=top1) + '\n')
     return top1.avg, losses.avg
 
@@ -290,7 +283,7 @@ class ProgressMeter(object):
         entries += [str(meter) for meter in self.meters]
         print_txt = '\t'.join(entries)
         print(print_txt)
-        txt_name = './log/' + time_str + 'cnn_log.txt'
+        txt_name = './log/' + time_str + 'log.txt'
         with open(txt_name, 'a') as f:
             f.write(print_txt + '\n')
 
