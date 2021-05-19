@@ -1,6 +1,6 @@
 # EfficientFace
 
-*Zengqun Zhao, Qingshan Liu, and Feng Zhou, "Robust Lightweight Facial Expression Recognition Network with Label Distribution Training", AAAI'21*
+*Zengqun Zhao, Qingshan Liu, and Feng Zhou, "[Robust Lightweight Facial Expression Recognition Network with Label Distribution Training](https://zengqunzhao.github.io/doc/pdfs/AAAI2021.pdf)", AAAI'21*
 
 
 ## Requirements
