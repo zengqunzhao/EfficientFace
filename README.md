@@ -42,7 +42,7 @@
   title={Robust Lightweight Facial Expression Recognition Network with Label Distribution Training},
   author={Zhao, Zengqun and Liu, Qingshan and Zhou, Feng},
   booktitle={AAAI},
-  pages={},
+  pages={3510-3519},
   year={2021}
 }
 ```
