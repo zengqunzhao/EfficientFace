@@ -48,3 +48,6 @@
   year={2021}
 }
 ```
+
+## Note
+The samples' number of CAER-S dataset employed in our work should be: all (69,982 samples), training set (48,995 samples), and test set (20,987 samples). We apologize for the typos in our paper.
