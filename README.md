@@ -31,7 +31,7 @@
 ```
 
 - Step 2: download pre-trained model from [Google Drive](https://drive.google.com/file/d/1sRS8Vc96uWx_1BSi-y9uhc_dY7mSED6f/view?usp=sharing), and put it into ***./checkpoint***.
-- Step 3: change the ***--data*** in *run.sh* to your path 
+- Step 3: change the ***--data*** in *run.sh* to your path
 
 - Step 4: run ``` sh run.sh ```
 
@@ -48,6 +48,12 @@
   year={2021}
 }
 ```
+
+## Pre-trained Models
+
+We provide the pre-trained ResNet-18 and ResNet-50 on MS-Celeb-1M (classes number is 12666) for your reseach.  
+The [Google Driver](https://drive.google.com/file/d/1dPCWFaa9xrs6nTVkweTJWyx9qGGdi3qe/view?usp=sharing) for ResNet-18 model. The [Google Driver](https://drive.google.com/file/d/1XweLvXPZPH53xj5Pklj5E3V9-LG9-pLD/view?usp=sharing) for ResNet-50 model.  
+The pre-trained ResNet-50 model can be also used for LDG.  
 
 ## Note
 The samples' number of CAER-S dataset employed in our work should be: all (69,982 samples), training set (48,995 samples), and test set (20,987 samples). We apologize for the typos in our paper.
