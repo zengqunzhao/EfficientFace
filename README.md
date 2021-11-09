@@ -10,7 +10,7 @@
 
 ## Training
 
-- Step 1: download basic emotions dataset of [RAF-DB](http://www.whdeng.cn/raf/model1.html), and make sure it have the structure like following:
+- Step 1: download basic emotions dataset of [RAF-DB](http://www.whdeng.cn/raf/model1.html), and make sure it has the structure like the following:
 
 ```txt
 ./RAF-DB/
@@ -38,11 +38,11 @@
 
 ## Pre-trained Models
 
-We provide the pre-trained ResNet-18 and ResNet-50 on MS-Celeb-1M (classes number is 12666) for your reseach.  
+We provide the pre-trained ResNet-18 and ResNet-50 on MS-Celeb-1M (classes number is 12666) for your research.  
 The [Google Driver](https://drive.google.com/file/d/1dPCWFaa9xrs6nTVkweTJWyx9qGGdi3qe/view?usp=sharing) for ResNet-18 model. The [Google Driver](https://drive.google.com/file/d/1XweLvXPZPH53xj5Pklj5E3V9-LG9-pLD/view?usp=sharing) for ResNet-50 model.  
 The pre-trained ResNet-50 model can be also used for LDG.  
 
-The fine-tuned LDG models on CAER-S, AffectNet-7, and AffectNet-8 can be downloaded [here](https://drive.google.com/file/d/1tu4996A74PPyZYeUmS-d_9728dvlYDQw/view?usp=sharing), [here](https://drive.google.com/file/d/1FQ1nizEmQ_FxGbk7zzOa4Toe4lGPkAZO/view?usp=sharing), and [here](https://drive.google.com/file/d/16b-Y52Z89FMRysi-gjKNS9z6-rdcijU0/view?usp=sharing), respeactively.
+The fine-tuned LDG models on CAER-S, AffectNet-7, and AffectNet-8 can be downloaded [here](https://drive.google.com/file/d/1tu4996A74PPyZYeUmS-d_9728dvlYDQw/view?usp=sharing), [here](https://drive.google.com/file/d/1FQ1nizEmQ_FxGbk7zzOa4Toe4lGPkAZO/view?usp=sharing), and [here](https://drive.google.com/file/d/16b-Y52Z89FMRysi-gjKNS9z6-rdcijU0/view?usp=sharing), respectively.
 
 
 ## Citation
@@ -61,4 +61,4 @@ The fine-tuned LDG models on CAER-S, AffectNet-7, and AffectNet-8 can be downloa
 
 
 ## Note
-The samples' number of CAER-S dataset employed in our work should be: all (69,982 samples), training set (48,995 samples), and test set (20,987 samples). We apologize for the typos in our paper.
+The samples' number of the CAER-S dataset employed in our work should be: all (69,982 samples), training set (48,995 samples), and test set (20,987 samples). We apologize for the typos in our paper.
