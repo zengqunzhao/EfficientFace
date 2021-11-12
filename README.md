@@ -32,17 +32,19 @@
 
 - Step 2: download pre-trained model from [Google Drive](https://drive.google.com/file/d/1sRS8Vc96uWx_1BSi-y9uhc_dY7mSED6f/view?usp=sharing), and put it into ***./checkpoint***.
 - Step 3: change the ***--data*** in *run.sh* to your path
-
 - Step 4: run ``` sh run.sh ```
 
 
 ## Pre-trained Models
-
+- Sept. 16, 2021 Update
 We provide the pre-trained ResNet-18 and ResNet-50 on MS-Celeb-1M (classes number is 12666) for your research.  
 The [Google Driver](https://drive.google.com/file/d/1dPCWFaa9xrs6nTVkweTJWyx9qGGdi3qe/view?usp=sharing) for ResNet-18 model. The [Google Driver](https://drive.google.com/file/d/1XweLvXPZPH53xj5Pklj5E3V9-LG9-pLD/view?usp=sharing) for ResNet-50 model.  
 The pre-trained ResNet-50 model can be also used for LDG.  
-
+- Nov. 6, 2021 Update
 The fine-tuned LDG models on CAER-S, AffectNet-7, and AffectNet-8 can be downloaded [here](https://drive.google.com/file/d/1tu4996A74PPyZYeUmS-d_9728dvlYDQw/view?usp=sharing), [here](https://drive.google.com/file/d/1FQ1nizEmQ_FxGbk7zzOa4Toe4lGPkAZO/view?usp=sharing), and [here](https://drive.google.com/file/d/16b-Y52Z89FMRysi-gjKNS9z6-rdcijU0/view?usp=sharing), respectively.
+- Nov. 12, 2021 Update
+The trained EfficientFace model on RAF-DB, CAER-S, AffectNet-7, and AffectNet-8 can be downloaded [here](https://drive.google.com/file/d/1W_3JT2_c_2R18kPTUUfX5QvQM2km7APC/view?usp=sharing), [here](https://drive.google.com/file/d/1mhdhQUU-ROJNM9kKK_043doVTT2wI-Ua/view?usp=sharing), [here](https://drive.google.com/file/d/1nwerwDyDqC2ia1Eqa-S6lb2SipwL-hTs/view?usp=sharing), and [here](https://drive.google.com/file/d/16nay3FwOLjwNVFG4sKc2TSFwC2TUPNZ8/view?usp=sharing), respectively.
+As demonstrated in the paper, the testing accuracy is 88.36\%, 85.87\%, 63.70\%, and 59.89\%, respectively.
 
 
 ## Citation
