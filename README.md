@@ -15,19 +15,17 @@
 ```txt
 ./RAF-DB/
          train/
-               0/
+               Neutral/
                  train_09748.jpg
                  ...
                  train_12271.jpg
-               1/
+               Happiness/
                ...
-               6/
+               Anger/
          test/
-              0/
+              Neutral/
               ...
-              6/
-
-[Note] 0: Neutral; 1: Happiness; 2: Sadness; 3: Surprise; 4: Fear; 5: Disgust; 6: Anger
+              Anger/
 ```
 
 - Step 2: download pre-trained model from [Google Drive](https://drive.google.com/file/d/1sRS8Vc96uWx_1BSi-y9uhc_dY7mSED6f/view?usp=sharing), and put it into ***./checkpoint***.
