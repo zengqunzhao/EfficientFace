@@ -12,20 +12,22 @@
 
 - Step 1: download basic emotions dataset of [RAF-DB](http://www.whdeng.cn/raf/model1.html), and make sure it has the structure like the following:
 
-```txt
+```
 ./RAF-DB/
          train/
-               Neutral/
+               0/
                  train_09748.jpg
                  ...
                  train_12271.jpg
-               Happiness/
+               1/
                ...
-               Anger/
+               6/
          test/
-              Neutral/
+              0/
               ...
-              Anger/
+              6/
+
+[Note] 0: Neutral; 1: Happiness; 2: Sadness; 3: Surprise; 4: Fear; 5: Disgust; 6: Anger
 ```
 
 - Step 2: download pre-trained model from [Google Drive](https://drive.google.com/file/d/1sRS8Vc96uWx_1BSi-y9uhc_dY7mSED6f/view?usp=sharing), and put it into ***./checkpoint***.
