@@ -34,6 +34,8 @@
 - Step 3: change the ***--data*** in *run.sh* to your path
 - Step 4: run ``` sh run.sh ```
 
+## Updates
+- Add test and visualization code. (May. 5, 2023 Update)
 
 ## Pre-trained Models
 - Sept. 16, 2021 Update\
