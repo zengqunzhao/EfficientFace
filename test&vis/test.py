@@ -30,8 +30,15 @@ def main():
     image_dir = glob.glob(os.path.join(data_dir, '*'))
     print(image_dir)
 
-    normalize = transforms.Normalize(mean=[0.5, 0.5, 0.5],
-                                     std=[0.5, 0.5, 0.5])
+    # RAF-DB
+    normalize = transforms.Normalize(mean=[0.57535914, 0.44928582, 0.40079932],
+                                      std=[0.20735591, 0.18981615, 0.18132027])
+    # # AffectNet
+    # normalize = transforms.Normalize(mean=[0.55391484, 0.43522123, 0.3821877],
+    #                                   std=[0.24837189, 0.21625527, 0.20221159])
+    # # CAER-S
+    # normalize = transforms.Normalize(mean=[0.35964426, 0.22359873, 0.19040863],
+    #                                   std=[0.15188067, 0.11678473, 0.1103445])
     
     transforms_com = transforms.Compose([transforms.Resize((224, 224)), transforms.ToTensor(), normalize])
 
